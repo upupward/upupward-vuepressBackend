@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function merge(left,right){
+            let i = 0
+            let j = 0
+            const temp = []
+            while(i<left.length && j<right.length){
+                if(left[i]<right[j]){
+                    temp.push(left[i])
+                    i++
+                } else{
+                    temp.push(right[j])
+                    j++
+                }
+            }
+            while (i<left.length){
+                temp.push(left[i])
+                i++
+            }
+            while(j<right.length){
+                temp.push(right[j])
+                j++
+            }
+            return temp
+        }
+    </script>
+</body>
+</html>
